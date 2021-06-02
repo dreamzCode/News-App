@@ -6,10 +6,11 @@ const axios = require('axios')
 
 //https://newsapi.org/v2/everything?q=Apple&sortBy=popularity&apiKey=API_KEY
 
-newsRouter.get('', async(req, res) => {
+newsRouter.get('/', async(req, res) => {
     try {
 
         const newsAPI = await axios.get(`https://newsapi.org/v2/everything?q=Tech&sortBy=publishedAt,popularity&apiKey=${process.env.API_KEY}`)
+        console.log(newsAPI)
         newsAPI.data.articles.forEach((article, index) => article.source.id = index)
         res.render('news', { articles: newsAPI.data.articles })
     } catch (err) {
@@ -30,6 +31,7 @@ newsRouter.get('', async(req, res) => {
 
 newsRouter.post('', async(req, res) => {
     let search = req.body.search
+    console.log(search)
     try {
         const newsAPI = await axios.get(`https://newsapi.org/v2/everything?q=${search}&sortBy=popularity,publishedAt&apiKey=${process.env.API_KEY}`)
         res.render('newsSearch', { articles: newsAPI.data.articles })
