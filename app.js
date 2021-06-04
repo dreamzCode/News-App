@@ -20,6 +20,16 @@ app.use(bodyParser.urlencoded({ extended: true }))
 const newsRouter = require('./src/routes/news')
 
 app.use('', newsRouter)
+app.use('/technology', newsRouter)
+app.use('/business', newsRouter)
+app.use('/science', newsRouter)
+app.use('/politics', newsRouter)
+app.use('/market', newsRouter)
+app.use('/investing', newsRouter)
+app.use('/health', newsRouter)
+app.use('/sport', newsRouter)
+app.use('/travel', newsRouter)
+app.use('/style', newsRouter)
 
 // Listen on port 5000
 app.listen(port, () => console.log(`Listening on port ${port}`))

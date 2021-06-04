@@ -40,6 +40,22 @@ h2 {
   cursor: pointer;
 }
 
+.header__menu {
+  font-weight: bold;
+}
+
+.menu__content {
+  padding: 10px;
+  color: #fff;
+  border-right: 2px solid grey;
+  float: left;
+  height: auto;
+}
+
+#last {
+  border-right: none;
+}
+
 .wrapper {
   padding: 0 1rem;
 }
@@ -69,5 +85,41 @@ h2 {
   max-width: 1300px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+.footer {
+  background-color: #101010;
+  height: 170px;
+  color: white;
+}
+
+.nodejs__footer {
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 125%;
+  position: relative;
+  top: 20px;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 15px;
+}
+
+.news__wrapper {
+  margin: 20px;
+  width: 100%;
+}
+
+.finishing {
+  position: relative;
+  left: 100px;
+  float: left;
+  margin: 20px 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 /*# sourceMappingURL=styles.css.map */

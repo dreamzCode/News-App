@@ -11,6 +11,7 @@
 <body>
     <header class="header">
         <div class="header__logo">Node.Js News</div>
+        <%- include('./partials/menu.ejs') %>
         <%- include('./partials/search.ejs') %>
     </header>
 
@@ -28,6 +29,17 @@
                 No posts found
             <% } %>
         </div>
+    </div>
+    <div>
+
+        <div class="footer">
+
+            <%- include('./partials/footer.ejs') %>
+
+
+        </div>
+
+
     </div>
 </body>
 </html>
